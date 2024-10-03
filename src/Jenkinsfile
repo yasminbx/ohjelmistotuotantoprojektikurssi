@@ -14,7 +14,7 @@ pipeline {
             steps {
 
 
-                git 'https://github.com/yasminbx/Tempconverter'
+                git 'https://github.com/yasminbx/ohjelmistotuotantoprojektikurssi'
             }
         }
         stage('Build Docker Image') {
