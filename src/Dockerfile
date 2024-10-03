@@ -18,4 +18,4 @@ WORKDIR /app
 COPY --from=build /app/target/assingments-1.0-SNAPSHOT.jar /app/assingments-1.0-SNAPSHOT.jar
 
 
-CMD ["java", "-jar", "interconversions.jar"]
+CMD ["java", "-jar", "assingments-1.0-SNAPSHOT.jar"]
