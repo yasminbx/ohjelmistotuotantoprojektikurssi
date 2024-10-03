@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class app1Test {
+public class fahrenheitTest {
 
     @Test
     public void testFahrenheitToCelsius() {

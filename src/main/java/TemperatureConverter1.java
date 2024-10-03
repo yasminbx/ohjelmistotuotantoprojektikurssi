@@ -1,5 +1,6 @@
 public class TemperatureConverter1 {
 
+
     public double fahrenheitToCelsius(double fahrenheit) {
         return (fahrenheit - 32) * 5 / 9;
     }
@@ -7,6 +8,10 @@ public class TemperatureConverter1 {
 
     public double celsiusToFahrenheit(double celsius) {
         return (celsius * 9 / 5) + 32;
+    }
+
+    public static double kelvinToFahrenheit(double kelvin) {
+        return (kelvin - 273.15) * 9 / 5 + 32;
     }
 
 
@@ -20,15 +25,20 @@ public class TemperatureConverter1 {
 
         double tempF = 98.6;
         double tempC = converter.fahrenheitToCelsius(tempF);
-        System.out.println(tempF + " Fahrenheit on " + tempC + " Celsius");
+        System.out.println(tempF + " Fahrenheit is equal to " + tempC + " Celsius");
 
 
         tempC = 37.0;
         tempF = converter.celsiusToFahrenheit(tempC);
-        System.out.println(tempC + " Celsius on " + tempF + " Fahrenheit");
+        System.out.println(tempC + " Celsius is equal to " + tempF + " Fahrenheit");
 
 
-        System.out.println("is 60°C extreme temperature? " + converter.isExtremeTemperature(60));
-        System.out.println("is -50°C extreme temperature? " + converter.isExtremeTemperature(-50));
+        double kelvinTemp = 300.1;
+        double fahrenheitTemp = kelvinToFahrenheit(kelvinTemp);
+        System.out.println(kelvinTemp + " Kelvin is equal to " + fahrenheitTemp + " Fahrenheit");
+
+
+        System.out.println("Is 60°C an extreme temperature? " + converter.isExtremeTemperature(60));
+        System.out.println("Is -50°C an extreme temperature? " + converter.isExtremeTemperature(-50));
     }
 }
